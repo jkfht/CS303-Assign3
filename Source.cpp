@@ -78,7 +78,7 @@ namespace A3 {
 	};
 	
 	/*----- Reversed Linear Search Function -----*/
-	template<typename Item_Type> int reverse_linear_search(std::vector<Item_Type>& items, Item_Type& target, size_t pos_last) {
+	template<typename Item_Type> size_t reverse_linear_search(std::vector<Item_Type>& items, Item_Type& target, size_t pos_last) {
 		//Accepts the last position of the sub-vector instead of the first position.
 		if (target == items[pos_last]) { //If the character in the last position is the target, return that position
 			return pos_last;
@@ -306,8 +306,15 @@ void queue_play() {
 			std::cout << "\nPopping ";
 			std::cout << example.front();
 			example.pop();
-			std::cout << " from the front of the queue. The front is now : ";
-			std::cout << example.front();
+			std::cout << " from the front of the queue.";
+			if (example.empty()) {
+				std::cout << " The queue is now empty.";
+			}
+			else {
+				std::cout<< "The front is now : ";
+				std::cout << example.front();
+			}
+				
 			break;
 		case 5:
 			std::cout << "\nMoving front value of ";

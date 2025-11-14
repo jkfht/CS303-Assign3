@@ -27,7 +27,7 @@ namespace A3 {
 		void reallocate();
 	};
 
-	template<typename Item_Type> int reverse_linear_search(std::vector<Item_Type>& items, Item_Type& target, size_t pos_first);
+	template<typename Item_Type> size_t reverse_linear_search(std::vector<Item_Type>& items, Item_Type& target, size_t pos_first);
 	void list_insertion_sort(std::list<int>& num);
 }
 
